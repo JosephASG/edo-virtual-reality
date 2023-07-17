@@ -1,0 +1,12 @@
+---
+import Escena1 from '../components/Escenas/escena_1'
+import Escena2 from '../components/Escenas/escena_2'
+import Escena3 from '../components/Escenas/escena_3'
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title='Van Der Pol - Diagrama de fases'>
+    <Escena1 client:only/>
+    <div class="canvas"></div>
+    <Escena2 client:only/>
+    <Escena3 client:only/>
+</Layout>
