@@ -61,7 +61,7 @@ export default function Escena2() {
         // Ejemplo de una EDO simple: oscilación armónica simple
         const amplitude = 1; // Amplitud de la oscilación
         const frequency = 0.5; // Frecuencia de la oscilación
-        const position = amplitude * Math.sin(2 * Math.PI * frequency * time);
+        const position = amplitude * Math.cos(2 * Math.PI * frequency * time);
 
         return position;
     }
@@ -70,7 +70,7 @@ export default function Escena2() {
         // Ejemplo de una EDO simple para la intensidad de luz: oscilación luminosa
         const amplitude = 1; // Amplitud de la oscilación luminosa
         const frequency = 0.5; // Frecuencia de la oscilación luminosa
-        const intensity = amplitude * Math.sin(2 * Math.PI * frequency * time) + 1; // Aseguramos que la intensidad sea positiva
+        const intensity = amplitude * Math.cos(2 * Math.PI * frequency * time) + 1; // Aseguramos que la intensidad sea positiva
 
         return intensity;
     }

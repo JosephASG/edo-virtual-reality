@@ -4,9 +4,26 @@ import Escena2 from '../components/Escenas/escena_2'
 import Escena3 from '../components/Escenas/escena_3'
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title='Van Der Pol - Diagrama de fases'>
+<Layout title='Movimiento Armónico Simple - MAS'>
+    <div class="fixed top-0 left-0 bg-slate-300 f-roobert px-6 py-4 rounded-br-[100px] w-[30%] h-screen flex flex-col justify-start items-center">
+        <h1 class="text-[20px] f-cy mb-4">EDO lineal de segundo orden con coeficientes constantes</h1>
+        <span class="text-[18px] my-2">-- d²x/dt² + ω²x = 0 --</span>
+        <p class="text-[18px] my-2">-- x'' + ω²x = 0 --</p>
+        <p class="text-[18px] my-2">Frecuencia angular de oscilación: ω = 2πf</p>
+        <img class="rounded-[15px] my-4" width="300" src="public/img/6.gif" alt="">
+        <p class="text-[18px] my-2 text-center bg-[#1d1e22] text-white p-2 rounded-lg">x(t) = A * cos(ωt + φ) </p>
+        <p class="text-[18px] my-2 text-center">, donde A es la amplitud y φ es la fase.</p>
+        <code class="bg-[#1d1e22] text-white p-4 rounded-xl mt-4">
+            <div class="flex justify-start items-center">
+                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6.675l-1.8-.6c-.2-.1-.3-.3-.2-.4l.9-1.7c.6-1.2-.7-2.5-1.9-1.9l-1.7.9c-.1.1-.3 0-.4-.2l-.6-1.8c-.4-1.3-2.2-1.3-2.6 0l-.6 1.8c-.1.2-.3.3-.4.2l-1.7-.9c-1.2-.6-2.5.7-1.9 1.9l.9 1.7c.1.1 0 .3-.2.4l-1.8.6c-1.3.4-1.3 2.3 0 2.7l1.8.6c.2 0 .3.2.2.3l-.9 1.7c-.6 1.2.7 2.5 1.9 1.9l1.7-.9c.2-.1.4 0 .4.2l.6 1.8c.4 1.3 2.3 1.3 2.7 0l.6-1.8c.1-.2.3-.3.4-.2l1.7.9c1.2.6 2.5-.7 1.9-1.9l-1-1.7c-.1-.2 0-.4.2-.4l1.8-.6c1.3-.4 1.3-2.2 0-2.6zm-7 3.7c-1.3 0-2.4-1.1-2.4-2.4 0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4 0 1.3-1.1 2.4-2.4 2.4z" fill="#4C4F5A"></path></svg>
+                <h1 class="ml-2">JS</h1>
+            </div>
+            <span class="text-[#ff8f40]">const</span> <span class="text-[#7a99ad]">position</span>  = amplitude * Math.<span class="text-[#e1ca72]">cos</span>(2 * Math.PI * frequency * time);</code>
+        <!-- <p class="text-[18px] my-2">La función seno se utiliza para generar una oscilación sinusoidal en función del tiempo.</p> -->
+        <!-- <img class="rounded-[15px] mt-4" src="public/img/f_senoidal.jpg" alt=""> -->
+    </div>
     <Escena1 client:only/>
     <div class="canvas"></div>
     <Escena2 client:only/>
-    <Escena3 client:only/>
+    <!-- <Escena3 client:only/> -->
 </Layout>
